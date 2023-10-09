@@ -8,6 +8,7 @@ internal object Dependencies {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    const val fragment = "androidx.fragment:fragment-ktx:1.5.2"
 
     const val composeMaterial = "androidx.compose.material:material:${Versions.materialVersion}"
     const val composeActivity = "androidx.activity:activity-compose:${Versions.activityComposeVersion}"
@@ -19,7 +20,8 @@ internal object Dependencies {
     const val viewModelSaveState = "androidx.lifecycle:lifecycle-viewmodel-savedstate:${Versions.lifecycleVersion}"
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}"
     const val runtimeCompose = "androidx.lifecycle:lifecycle-runtime-compose:${Versions.runtimeComposeVersion}"
-    const val lifecycleService = "androidx.lifecycle:lifecycle-service:${Versions.lifecycleVersion}"
+    //const val lifecycleService = "androidx.lifecycle:lifecycle-service:${Versions.lifecycleVersion}"
+    const val lifecycleService = "androidx.lifecycle:lifecycle-common-java8:2.3.1"
 
     val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
     const val hiltNavCompose = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigationComposeVersion}"

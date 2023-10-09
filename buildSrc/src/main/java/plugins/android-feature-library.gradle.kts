@@ -53,7 +53,7 @@ dependencies{
     addAndroidUiDependencies()
     addAndroLifeCycleDependencies()
     addCoroutinesAndroidDependencies()
-    addCoilImageLoadingDependencies()
+    //addCoilImageLoadingDependencies()
     addHiltDependencies()
     addAndroidTestsDependencies()
 }

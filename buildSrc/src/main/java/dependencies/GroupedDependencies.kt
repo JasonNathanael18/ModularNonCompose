@@ -15,13 +15,14 @@ internal val androidUiDependencies = listOf(
     Dependencies.material,
     Dependencies.constraintLayout,
     Dependencies.navigationFragment,
-    Dependencies.navigationUi
+    Dependencies.navigationUi,
+    Dependencies.fragment
 )
 
 internal val androidxLifeCycleDependencies = listOf(
-    Dependencies.viewModel,
+    //Dependencies.viewModel,
     Dependencies.liveData,
-    Dependencies.runtimeCompose,
+    //Dependencies.runtimeCompose,
     Dependencies.viewModelSaveState,
     Dependencies.lifecycleService,
 )
