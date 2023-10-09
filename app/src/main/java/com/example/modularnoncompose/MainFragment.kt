@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.router.FeatureScreenProfileRouteContract
 import com.example.router.FeatureScreenRepoListRouteContract
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -14,6 +16,10 @@ class MainFragment : Fragment() {
 
     @Inject
     lateinit var featureRepolistRouteContractImpl: FeatureScreenRepoListRouteContract
+
+//    @Inject
+//    lateinit var featureProfileRouteContractImpl: FeatureScreenProfileRouteContract
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,13 +35,13 @@ class MainFragment : Fragment() {
 
 
 //        buttonNavigateFeatureA.setOnClickListener {
-//        featureRepolistRouteContractImpl.show(
-//            dataToPass = "abc",
-//            navController = findNavController()
-//        )
+        featureRepolistRouteContractImpl.show(
+            dataToPass = "abc",
+            navController = findNavController()
+        )
 //        }
 //        buttonNavigateFeatureB.setOnClickListener {
-//            featureBRouteContractImpl.show("def", findNavController())
+//        featureProfileRouteContractImpl.show("def", findNavController())
 //        }
 //        toggleTheme.setOnClickListener {
 //            MainActivity.accentTheme = !MainActivity.accentTheme

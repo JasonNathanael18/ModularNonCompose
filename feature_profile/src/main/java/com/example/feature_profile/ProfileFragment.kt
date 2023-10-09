@@ -21,7 +21,7 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        println("the passed data to fragment a is ${FeatureAFragmentArgs.fromBundle(requireArguments()).argAValue}")
+        println("the passed data to fragment b is ${ProfileFragmentArgs.fromBundle(requireArguments()).argProfileValue}")
 //        buttonOpenFeatureScreenB.setOnClickListener {
 //            featureScreenBRouteContract.show("as", findNavController())
 //        }

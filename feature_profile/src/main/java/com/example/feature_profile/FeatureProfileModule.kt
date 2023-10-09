@@ -5,6 +5,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
+import com.example.router.FeatureScreenProfileRouteContract
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -12,6 +13,6 @@ class FeatureProfileModule {
 
     @Singleton
     @Provides
-    fun providesFeatureProfileRouteContract(): FeatureProfileRouteContractImpl =
+    fun providesFeatureProfileRouteContract(): FeatureScreenProfileRouteContract =
         FeatureProfileRouteContractImpl()
 }

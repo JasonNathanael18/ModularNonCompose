@@ -46,6 +46,7 @@ android{
 dependencies{
     addDiModule()
     addDomainModule()
+    addRouterModule()
     //addCommonModule()
 
     //addAndroidComposeDependencies()
@@ -55,4 +56,8 @@ dependencies{
     addCoilImageLoadingDependencies()
     addHiltDependencies()
     addAndroidTestsDependencies()
+}
+
+kapt{
+    correctErrorTypes = true
 }
