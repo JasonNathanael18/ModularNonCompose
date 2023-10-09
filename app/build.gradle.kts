@@ -44,6 +44,7 @@ android {
     }
     buildFeatures{
         compose = false
+        viewBinding = true
     }
 
     composeOptions {
@@ -61,7 +62,8 @@ dependencies {
     addDataModule()
     addDomainModule()
     addDiModule()
-//    addFeatureModule()
+    addFeatureModule()
+    addRouterModule()
 //    addCommonModule()
 
     //addAndroidComposeDependencies()

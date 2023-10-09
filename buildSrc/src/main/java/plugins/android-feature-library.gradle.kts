@@ -6,6 +6,7 @@ plugins {
     id ("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id ("dagger.hilt.android.plugin")
+    id ("androidx.navigation.safeargs.kotlin")
 }
 
 android{
@@ -28,6 +29,7 @@ android{
 
     buildFeatures{
         compose = false
+        viewBinding = true
     }
 
     composeOptions {

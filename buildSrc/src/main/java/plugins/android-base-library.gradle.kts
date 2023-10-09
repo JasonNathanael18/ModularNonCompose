@@ -28,6 +28,7 @@ android{
 
     buildFeatures{
         compose = false
+        viewBinding = true
     }
 
     composeOptions {

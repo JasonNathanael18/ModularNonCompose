@@ -27,6 +27,10 @@ fun DependencyHandler.addEntityModule(configurationName:String = "implementation
     add(configurationName, project(ModulesDep.entity))
 }
 
+fun DependencyHandler.addRouterModule(configurationName:String = "implementation"){
+    add(configurationName, project(ModulesDep.router))
+}
+
 fun DependencyHandler.addFeatureModule(){
     featureModule.forEach {
         add("implementation", project(it))

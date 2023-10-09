@@ -13,7 +13,9 @@ internal val androidComposeDependencies = listOf(
 internal val androidUiDependencies = listOf(
     Dependencies.appcompat,
     Dependencies.material,
-    Dependencies.constraintLayout
+    Dependencies.constraintLayout,
+    Dependencies.navigationFragment,
+    Dependencies.navigationUi
 )
 
 internal val androidxLifeCycleDependencies = listOf(

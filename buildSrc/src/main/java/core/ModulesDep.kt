@@ -7,8 +7,9 @@ object ModulesDep {
     const val apiResponse = ":model:apiresponse"
     const val entity = ":model:entity"
     const val common = ":common"
+    const val router = ":router"
 
-    const val repoList = ":features:repolist"
-    const val profile = ":features:profile"
+    const val repoList = ":feature_repolist"
+    const val profile = ":feature_profile"
 }
 
