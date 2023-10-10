@@ -48,6 +48,7 @@ dependencies{
     addDomainModule()
     addRouterModule()
     //addCommonModule()
+    addUiComponentModule()
 
     //addAndroidComposeDependencies()
     addAndroidUiDependencies()

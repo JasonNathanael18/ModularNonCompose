@@ -8,6 +8,7 @@ object ModulesDep {
     const val entity = ":model:entity"
     const val common = ":common"
     const val router = ":router"
+    const val uiComponent = ":uicomponent"
 
     const val repoList = ":feature_repolist"
     const val profile = ":feature_profile"

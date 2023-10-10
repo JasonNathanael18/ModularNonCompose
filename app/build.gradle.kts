@@ -64,6 +64,7 @@ dependencies {
     addDiModule()
     addFeatureModule()
     addRouterModule()
+    addUiComponentModule()
 //    addCommonModule()
 
     //addAndroidComposeDependencies()
