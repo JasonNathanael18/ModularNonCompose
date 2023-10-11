@@ -6,7 +6,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.domain.utils.DataConvert
 import com.example.entity.RepoItemEntity
 import com.example.repolist.R
 import com.example.repolist.databinding.FragmentFeatureRepolistBinding
@@ -21,6 +23,9 @@ class RepolistFragment : BaseFragment(R.layout.fragment_feature_repolist),
     RepoListAdapter.OnItemClickListener {
 
     private lateinit var binding: FragmentFeatureRepolistBinding
+
+    @Inject
+    lateinit var dataConvert: DataConvert
 
     @Inject
     lateinit var adapter: RepoListAdapter
@@ -86,6 +91,7 @@ class RepolistFragment : BaseFragment(R.layout.fragment_feature_repolist),
     }
 
     override fun onItemClick(view: View, item: RepoItemEntity) {
-        //featureProfileRouteContractImpl.show("as", findNavController())
+        val repoItemJsonData = dataConvert.toJson(item) ?: ""
+        featureProfileRouteContractImpl.show(repoItemJsonData, findNavController())
     }
 }

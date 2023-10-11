@@ -1,31 +1,33 @@
 package com.example.feature_profile
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.example.domain.utils.DataConvert
+import com.example.entity.RepoItemEntity
 import com.example.profile.R
+import com.example.profile.databinding.FragmentFeatureProfileBinding
+import com.example.uicomponent.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class ProfileFragment : Fragment() {
+class ProfileFragment : BaseFragment(R.layout.fragment_feature_profile) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_feature_profile, container, false)
-    }
+    @Inject
+    lateinit var dataConvert: DataConvert
 
+    private lateinit var binding: FragmentFeatureProfileBinding
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private lateinit var repoData: RepoItemEntity
+
+    override fun initComponent() {
+        super.initComponent()
+        binding = FragmentFeatureProfileBinding.bind(requireView())
+
         println("the passed data to fragment b is ${ProfileFragmentArgs.fromBundle(requireArguments()).argProfileValue}")
-//        buttonOpenFeatureScreenB.setOnClickListener {
-//            featureScreenBRouteContract.show("as", findNavController())
-//        }
 
+        val data = ProfileFragmentArgs.fromBundle(requireArguments()).argProfileValue
+
+        repoData = dataConvert.toData(data)!!
+        println("the passed data to fragment b is ${repoData.repoName}")
     }
 
 }
