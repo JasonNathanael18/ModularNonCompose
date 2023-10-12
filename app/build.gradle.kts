@@ -23,11 +23,13 @@ android {
 
     buildTypes {
         debug {
+            buildConfigField("String", "base_url", "\"https://api.github.com/\"")
             isMinifyEnabled = false
             isShrinkResources = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
-        debug {
+        release {
+            buildConfigField("String", "base_url", "\"https://api.github.com/\"")
             isMinifyEnabled = false
             isShrinkResources = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

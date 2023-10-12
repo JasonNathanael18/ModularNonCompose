@@ -1,6 +1,7 @@
 package com.example.modularnoncompose.di
 
 import com.example.di.qualifier.AppBaseUrl
+import com.example.modularnoncompose.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,5 +12,5 @@ import dagger.hilt.components.SingletonComponent
 class BaseUrlModule{
     @Provides
     @AppBaseUrl
-    fun provideBaseUrl():String = "https://api.github.com/"
+    fun provideBaseUrl():String = BuildConfig.base_url
 }

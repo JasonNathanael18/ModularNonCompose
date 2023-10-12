@@ -30,6 +30,7 @@ internal val androidxLifeCycleDependencies = listOf(
 internal val coroutinesAndroidDependencies = listOf(
     Dependencies.kotlinCoroutines,
     Dependencies.moshiConverter,
+    Dependencies.moshi,
 )
 
 internal val coilImageLoadingDependencies = listOf(
